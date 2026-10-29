@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radha-Krishna Cloth House & Beauty Care</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            maroon: '#800020',
+                            gold: '#D4AF37',
+                            cream: '#FFFDD0',
+                            red: '#B91C1C'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 font-['Poppins'] text-gray-800">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-brand-maroon text-brand-cream text-xs sm:text-sm py-2 px-4 text-center font-medium">
+        ✨ Akaha Chowk (Gamariya, Bakhri, Begusarai) • Shadi-Byah & Chhath Puja Special Collection! ✨
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div>
+                <h1 class="text-lg sm:text-xl font-bold text-brand-maroon">Radha-Krishna</h1>
+                <p class="text-[10px] text-gray-500 uppercase tracking-wider">Cloth House & Beauty Care</p>
+            </div>
+            <div class="flex items-center gap-2">
+                <a href="https://wa.me/918102903426?text=Namaste,%20mujhe%20website%20se%20order%20karna%20hai" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-full text-xs font-semibold flex items-center gap-1 shadow transition">
+                    💬 WhatsApp Order
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-brand-maroon to-red-900 text-white py-12 px-4 text-center">
+        <div class="max-w-3xl mx-auto space-y-4">
+            <span class="bg-brand-gold text-brand-maroon text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow">Udghatan Special 2027</span>
+            <h2 class="text-3xl sm:text-5xl font-bold tracking-tight">Kam Dam Mein Sabse Sundar!</h2>
+            <p class="text-xs sm:text-sm text-gray-200 max-w-xl mx-auto">Ladies Fancy Saree, Designer Kurti, Shadi Suits aur Branded Cosmetics ka sabse vishwasniye aur sasta thikana.</p>
+            <div class="pt-2 flex flex-wrap justify-center gap-3">
+                <a href="#products" class="bg-brand-gold text-brand-maroon font-bold px-6 py-3 rounded-full text-sm shadow-lg hover:bg-yellow-400 transition">Saman Dekhein 👇</a>
+                <a href="https://wa.me/918102903426?text=Namaste,%20mujhe%20dukaan%20ke%20bare%20mein%20jaankari%20chahiye" target="_blank" class="bg-white text-brand-maroon font-bold px-6 py-3 rounded-full text-sm shadow-lg hover:bg-gray-100 transition">Call / WhatsApp Sampark</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features / Highlights -->
+    <section class="bg-white py-6 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div class="p-3 bg-gray-50 rounded-xl">
+                <div class="text-xl mb-1">🏛️</div>
+                <h4 class="font-bold text-xs text-brand-maroon">Holesale & Retail</h4>
+                <p class="text-[11px] text-gray-500">Sabhi dam uchit aur saste</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl">
+                <div class="text-xl mb-1">🎁</div>
+                <h4 class="font-bold text-xs text-brand-maroon">Shadi-Chhath Special</h4>
+                <p class="text-[11px] text-gray-500">Naye design ki nayi range</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl">
+                <div class="text-xl mb-1">💄</div>
+                <h4 class="font-bold text-xs text-brand-maroon">Genuine Cosmetics</h4>
+                <p class="text-[11px] text-gray-500">100% asli beauty products</p>
+            </div>
+            <div class="p-3 bg-gray-50 rounded-xl">
+                <div class="text-xl mb-1">📍</div>
+                <h4 class="font-bold text-xs text-brand-maroon">Akaha Chowk, Bakhri</h4>
+                <p class="text-[11px] text-gray-500">Gamariya, Begusarai</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Filter Bar -->
+    <div class="max-w-6xl mx-auto px-4 py-8">
+        <div class="flex justify-between items-center mb-4">
+            <h3 class="text-lg font-bold text-brand-maroon">Categories Chunein</h3>
+        </div>
+        <div class="flex flex-wrap gap-2" id="categoryBtns">
+            <button onclick="filterCategory('all')" class="cat-btn bg-brand-maroon text-white px-4 py-2 rounded-full text-xs font-semibold shadow-sm transition">Sabhi (All)</button>
+            <button onclick="filterCategory('saree')" class="cat-btn bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-xs font-semibold hover:bg-gray-100 transition">Saadiyan (Saree)</button>
+            <button onclick="filterCategory('kurti')" class="cat-btn bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-xs font-semibold hover:bg-gray-100 transition">Kurti & Suit</button>
+            <button onclick="filterCategory('beauty')" class="cat-btn bg-white text-gray-700 border border-gray-300 px-4 py-2 rounded-full text-xs font-semibold hover:bg-gray-100 transition">Beauty & Cosmetics</button>
+            <button onclick="filterCategory('sale')" class="cat-btn bg-red-100 text-red-700 border border-red-300 px-4 py-2 rounded-full text-xs font-semibold hover:bg-red-200 transition">🔥 ₹99 / ₹149 Sale</button>
+        </div>
+    </div>
+
+    <!-- Product Grid Section -->
+    <section id="products" class="max-w-6xl mx-auto px-4 pb-16">
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="productGrid">
+            <!-- Dynamic products will load here -->
+        </div>
+    </section>
+
+    <!-- Store Info & Location Banner -->
+    <section class="bg-brand-cream py-10 px-4 border-t border-b border-yellow-200">
+        <div class="max-w-4xl mx-auto text-center space-y-3">
+            <h3 class="text-xl font-bold text-brand-maroon">Dukaan Par Padharें!</h3>
+            <p class="text-sm text-gray-700">Aapka swagat hai hamari dukan par. Shadi-byah ki kharidari ke liye sabse behtareen kapde aur cosmetics uplabdh hain.</p>
+            <p class="font-bold text-brand-maroon text-sm">📍 Pata: Akaha Chowk (Gamariya, Bakhri, Begusarai)</p>
+            <div class="pt-2">
+                <a href="https://wa.me/918102903426?text=Namaste,%20mujhe%20location%20aur%20time%20chahiye" target="_blank" class="bg-brand-maroon text-white font-medium px-6 py-2.5 rounded-full text-xs shadow inline-block">WhatsApp Par Location Mangein</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 px-4 text-center text-xs space-y-3">
+        <p class="font-bold text-brand-gold text-base">Radha-Krishna Cloth House & Beauty Care</p>
+        <p class="text-gray-300">Akaha Chowk (Gamariya, Bakhri, Begusarai) • Sampark: +91 8102903426</p>
+        <p class="text-gray-500 pt-4">© 2027 All Rights Reserved | Powered by Bipin Ji</p>
+    </footer>
+
+    <!-- JavaScript for Catalogue & WhatsApp Ordering -->
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Fancy Designer Wedding Saree",
+                category: "saree",
+                price: "₹699",
+                oldPrice: "₹1299",
+                img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=500&q=80",
+                badge: "Shadi Special"
+            },
+            {
+                id: 2,
+                name: "Heavy Bridal Silk Saree",
+                category: "saree",
+                price: "₹1499",
+                oldPrice: "₹2499",
+                img: "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=500&q=80",
+                badge: "New Arrival"
+            },
+            {
+                id: 3,
+                name: "Chhath Puja Special Saree",
+                category: "saree",
+                price: "₹849",
+                oldPrice: "₹1499",
+                img: "https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80",
+                badge: "Festive Special"
+            },
+            {
+                id: 4,
+                name: "Cotton Daily Wear Kurti",
+                category: "kurti",
+                price: "₹299",
+                oldPrice: "₹499",
+                img: "https://images.unsplash.com/photo-1608256246200-53e635b5b65f?auto=format&fit=crop&w=500&q=80",
+                badge: "Trending"
+            },
+            {
+                id: 5,
+                name: "Party Wear Designer Kurti",
+                category: "kurti",
+                price: "₹499",
+                oldPrice: "₹799",
+                img: "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&w=500&q=80",
+                badge: "Best Seller"
+            },
+            {
+                id: 6,
+                name: "Complete Bridal Makeup Kit",
+                category: "beauty",
+                price: "₹399",
+                oldPrice: "₹699",
+                img: "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=500&q=80",
+                badge: "Beauty Care"
+            },
+            {
+                id: 7,
+                name: "Branded Lipstick & Kajal Combo",
+                category: "beauty",
+                price: "₹149",
+                oldPrice: "₹299",
+                img: "https://images.unsplash.com/photo-1586495777744-4413f21062fa?auto=format&fit=crop&w=500&q=80",
+                badge: "🔥 ₹149 Sale"
+            },
+            {
+                id: 8,
+                name: "Special Discount Top / Wear",
+                category: "sale",
+                price: "₹99",
+                oldPrice: "₹250",
+                img: "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80",
+                badge: "🔥 ₹99 Sale"
+            }
+        ];
+
+        function displayProducts(filter = 'all') {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = '';
+
+            const filtered = filter === 'all' ? products : products.path ? products : products.filter(p => p.category === filter);
+
+            filtered.forEach(p => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden flex flex-col justify-between hover:shadow-md transition";
+                card.innerHTML = `
+                    <div>
+                        <div class="relative h-44 bg-gray-200 overflow-hidden">
+                            <img src="${p.img}" alt="${p.name}" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                            <span class="absolute top-2 left-2 bg-brand-maroon text-white text-[10px] px-2.5 py-0.5 rounded-full font-semibold shadow">${p.badge}</span>
+                        </div>
+                        <div class="p-3.5">
+                            <h4 class="text-xs sm:text-sm font-semibold text-gray-800 line-clamp-1">${p.name}</h4>
+                            <div class="mt-1.5 flex items-center gap-2">
+                                <span class="text-sm font-bold text-brand-red">${p.price}</span>
+                                <span class="text-xs text-gray-400 line-through">${p.oldPrice}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-3.5 pt-0">
+                        <a href="https://wa.me/918102903426?text=Hello,%20mujhe%20yeh%20item%20kharidna%20hai:%20${encodeURIComponent(p.name)}%20(%20${p.price}%20)" target="_blank" class="w-full bg-green-600 hover:bg-green-700 text-white text-xs font-semibold py-2.5 rounded-lg flex items-center justify-center gap-1 shadow transition">
+                            🛒 Order on WhatsApp
+                        </a>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterCategory(cat) {
+            document.querySelectorAll('.cat-btn').forEach(btn => {
+                btn.classList.remove('bg-brand-maroon', 'text-white');
+                btn.classList.add('bg-white', 'text-gray-700');
+            });
+            event.target.classList.remove('bg-white', 'text-gray-700');
+            event.target.classList.add('bg-brand-maroon', 'text-white');
+
+            displayProducts(cat);
+        }
+
+        displayProducts('all');
+    </script>
+</body>
+</html>
